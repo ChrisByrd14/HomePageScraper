@@ -30,5 +30,5 @@ class Scraper:
 
     def next_url(self):
         if len(self.search_pages) == 0:
-            return False
+            return ''
         return self.search_pages.pop(0)['href']
