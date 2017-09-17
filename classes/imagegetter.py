@@ -20,7 +20,6 @@ class ImageGetter:
             download_dir = '{}{}'.format(self.dir, parsed_url.netloc)
             os.system('mkdir {}'.format(download_dir))
             webkit_call = 'webkit2png --dir={} {}'.format(download_dir, link)
-            print(webkit_call)
             os.system(webkit_call)
         except Exception as e:
             print("Exception occurred: {}".format(str(e)))
