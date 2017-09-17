@@ -12,12 +12,16 @@ pip install -r requirements.txt
 
 ## Usage
 ```bash
-usage: main.py [-h] [-q QUERY] [-n NUM_PAGES]
+usage: main.py [-h] [-q QUERY] [-n NUM_PAGES] [-d DIRECTORY]
 
 optional arguments:
   -h, --help            show this help message and exit
   -q QUERY, --query QUERY
-                        The search query
+                        The search query to run.
   -n NUM_PAGES, --num-pages NUM_PAGES
-                        Max number of search pages to scrape
+                        Max number of search pages to scrape.Default value is
+                        1 page.
+  -d DIRECTORY, --directory DIRECTORY
+                        The directory to download the images to. Defaults to
+                        your home directory.
 ```
