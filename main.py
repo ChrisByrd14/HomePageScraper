@@ -8,7 +8,7 @@ import sys
 
 def main():
     parser = cli.CLIParser()
-    args = parser.parse_args(sys.argv[1:])
+    args = parser.parse_args()
 
     retreiver = pr.PageRetreiver(args.query, args.num_pages)
     retreiver.get_pages()

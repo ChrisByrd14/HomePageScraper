@@ -27,6 +27,6 @@ class CLIParser:
 
         self.parser = parser
 
-    def parse_args(self, arguments):
-        '''Parses provided arguments and returns named tuple'''
-        return self.parser.parse_args(arguments)
+    def parse_args(self):
+        '''Parses CLI arguments and returns named tuple'''
+        return self.parser.parse_args()
