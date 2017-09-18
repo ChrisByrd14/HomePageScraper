@@ -23,10 +23,12 @@ class Scraper:
             link = div.find('a')['href']
             link = link.split('&sa=')[0]
             link = link.replace('/url?q=', '')
+            self.add_external_link(link)
 
-            # if not internal Google link
-            if '/search?q=' not in link.lower():
-                self.links.append(link)
+    def add_external_link(self, link):
+        ''' append if not internal Google link '''
+        if '/search?q=' not in link.lower():
+            self.links.append(link)
 
     def next_url(self):
         if len(self.search_pages) == 0:
